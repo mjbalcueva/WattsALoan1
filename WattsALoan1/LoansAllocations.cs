@@ -37,8 +37,6 @@ namespace WattsALoan1
 
         private void LoansAllocations_FormClosing(object sender, FormClosingEventArgs e)
         {
-            dsEmployees.WriteXml("employees.xml");
-            dsCustomers.WriteXml("customers.xml");
             dsLoansAllocations.WriteXml("loans.xml");
         }
 

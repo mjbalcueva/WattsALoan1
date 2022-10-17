@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dsEmployees = new System.Data.DataSet();
             this.tblEmployee = new System.Data.DataTable();
             this.colEmployeeNumber = new System.Data.DataColumn();
@@ -56,12 +59,22 @@
             this.colPaymentFor = new System.Data.DataColumn();
             this.colPaymentAmount = new System.Data.DataColumn();
             this.colBalance = new System.Data.DataColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.paymentNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.paymentDateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.receivedByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.paymentForDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.paymentAmountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.balanceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnLoans = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dsEmployees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsLoansAllocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPayments)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblPayment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dsEmployees
@@ -250,19 +263,130 @@
             this.colBalance.DataType = typeof(double);
             this.colBalance.DefaultValue = 0D;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.paymentNumberDataGridViewTextBoxColumn,
+            this.paymentDateDataGridViewTextBoxColumn,
+            this.receivedByDataGridViewTextBoxColumn,
+            this.paymentForDataGridViewTextBoxColumn,
+            this.paymentAmountDataGridViewTextBoxColumn,
+            this.balanceDataGridViewTextBoxColumn});
+            this.dataGridView1.DataMember = "Payment";
+            this.dataGridView1.DataSource = this.dsPayments;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(776, 379);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // paymentNumberDataGridViewTextBoxColumn
+            // 
+            this.paymentNumberDataGridViewTextBoxColumn.DataPropertyName = "PaymentNumber";
+            this.paymentNumberDataGridViewTextBoxColumn.HeaderText = "Pmt #";
+            this.paymentNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.paymentNumberDataGridViewTextBoxColumn.Name = "paymentNumberDataGridViewTextBoxColumn";
+            this.paymentNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // paymentDateDataGridViewTextBoxColumn
+            // 
+            this.paymentDateDataGridViewTextBoxColumn.DataPropertyName = "PaymentDate";
+            dataGridViewCellStyle7.Format = "d";
+            dataGridViewCellStyle7.NullValue = null;
+            this.paymentDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            this.paymentDateDataGridViewTextBoxColumn.HeaderText = "Pmt Date";
+            this.paymentDateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.paymentDateDataGridViewTextBoxColumn.Name = "paymentDateDataGridViewTextBoxColumn";
+            this.paymentDateDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // receivedByDataGridViewTextBoxColumn
+            // 
+            this.receivedByDataGridViewTextBoxColumn.DataPropertyName = "ReceivedBy";
+            this.receivedByDataGridViewTextBoxColumn.DataSource = this.dsEmployees;
+            this.receivedByDataGridViewTextBoxColumn.DisplayMember = "Employee.EmployeeNumber";
+            this.receivedByDataGridViewTextBoxColumn.HeaderText = "Received By";
+            this.receivedByDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.receivedByDataGridViewTextBoxColumn.Name = "receivedByDataGridViewTextBoxColumn";
+            this.receivedByDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.receivedByDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.receivedByDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // paymentForDataGridViewTextBoxColumn
+            // 
+            this.paymentForDataGridViewTextBoxColumn.DataPropertyName = "PaymentFor";
+            this.paymentForDataGridViewTextBoxColumn.DataSource = this.dsLoansAllocations;
+            this.paymentForDataGridViewTextBoxColumn.DisplayMember = "Loan.LoanNumber";
+            this.paymentForDataGridViewTextBoxColumn.HeaderText = "Payment For";
+            this.paymentForDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.paymentForDataGridViewTextBoxColumn.Name = "paymentForDataGridViewTextBoxColumn";
+            this.paymentForDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.paymentForDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.paymentForDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // paymentAmountDataGridViewTextBoxColumn
+            // 
+            this.paymentAmountDataGridViewTextBoxColumn.DataPropertyName = "PaymentAmount";
+            dataGridViewCellStyle8.Format = "C2";
+            dataGridViewCellStyle8.NullValue = null;
+            this.paymentAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            this.paymentAmountDataGridViewTextBoxColumn.HeaderText = "Pmt Amt";
+            this.paymentAmountDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.paymentAmountDataGridViewTextBoxColumn.Name = "paymentAmountDataGridViewTextBoxColumn";
+            this.paymentAmountDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // balanceDataGridViewTextBoxColumn
+            // 
+            this.balanceDataGridViewTextBoxColumn.DataPropertyName = "Balance";
+            dataGridViewCellStyle9.Format = "C2";
+            dataGridViewCellStyle9.NullValue = null;
+            this.balanceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            this.balanceDataGridViewTextBoxColumn.HeaderText = "Balance";
+            this.balanceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.balanceDataGridViewTextBoxColumn.Name = "balanceDataGridViewTextBoxColumn";
+            this.balanceDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(713, 406);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 32);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnLoans
+            // 
+            this.btnLoans.Location = new System.Drawing.Point(632, 406);
+            this.btnLoans.Name = "btnLoans";
+            this.btnLoans.Size = new System.Drawing.Size(75, 32);
+            this.btnLoans.TabIndex = 3;
+            this.btnLoans.Text = "Loans...";
+            this.btnLoans.UseVisualStyleBackColor = true;
+            this.btnLoans.Click += new System.EventHandler(this.btnLoans_Click);
+            // 
             // Payments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnLoans);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "Payments";
             this.Text = "Payments";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Payments_FormClosing);
+            this.Load += new System.EventHandler(this.Payments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsEmployees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsLoansAllocations)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsPayments)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblPayment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -297,5 +421,14 @@
         private System.Data.DataColumn colPaymentFor;
         private System.Data.DataColumn colPaymentAmount;
         private System.Data.DataColumn colBalance;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paymentNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paymentDateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn receivedByDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn paymentForDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn paymentAmountDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn balanceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnLoans;
     }
 }
