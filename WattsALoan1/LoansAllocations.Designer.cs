@@ -48,10 +48,20 @@
             this.colTitle = new System.Data.DataColumn();
             this.colHourlySalary = new System.Data.DataColumn();
             this.colEmployeeDetails = new System.Data.DataColumn();
+            this.dsCustomers = new System.Data.DataSet();
+            this.tblCustomer = new System.Data.DataTable();
+            this.colAccountNumber = new System.Data.DataColumn();
+            this.dataColumn1 = new System.Data.DataColumn();
+            this.dataColumn2 = new System.Data.DataColumn();
+            this.colEmailAddress = new System.Data.DataColumn();
+            this.colPhoneNumber = new System.Data.DataColumn();
+            this.colCustomerDetails = new System.Data.DataColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dsLoansAllocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEmployees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployee)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCustomers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // dsLoansAllocations
@@ -186,6 +196,54 @@
             this.colEmployeeDetails.Expression = "EmployeeNumber + \': \' +FirstName + \' \' + LastName";
             this.colEmployeeDetails.ReadOnly = true;
             // 
+            // dsCustomers
+            // 
+            this.dsCustomers.DataSetName = "Customers";
+            this.dsCustomers.Tables.AddRange(new System.Data.DataTable[] {
+            this.tblCustomer});
+            // 
+            // tblCustomer
+            // 
+            this.tblCustomer.Columns.AddRange(new System.Data.DataColumn[] {
+            this.colAccountNumber,
+            this.dataColumn1,
+            this.dataColumn2,
+            this.colEmailAddress,
+            this.colPhoneNumber,
+            this.colCustomerDetails});
+            this.tblCustomer.Constraints.AddRange(new System.Data.Constraint[] {
+            new System.Data.UniqueConstraint("Constraint1", new string[] {
+                        "AccountNumber"}, false)});
+            this.tblCustomer.TableName = "Customer";
+            // 
+            // colAccountNumber
+            // 
+            this.colAccountNumber.AllowDBNull = false;
+            this.colAccountNumber.ColumnName = "AccountNumber";
+            // 
+            // dataColumn1
+            // 
+            this.dataColumn1.ColumnName = "FirstName";
+            // 
+            // dataColumn2
+            // 
+            this.dataColumn2.AllowDBNull = false;
+            this.dataColumn2.ColumnName = "LastName";
+            // 
+            // colEmailAddress
+            // 
+            this.colEmailAddress.ColumnName = "EmailAddress";
+            // 
+            // colPhoneNumber
+            // 
+            this.colPhoneNumber.ColumnName = "PhoneNumber";
+            // 
+            // colCustomerDetails
+            // 
+            this.colCustomerDetails.ColumnName = "CustomerDetails";
+            this.colCustomerDetails.Expression = "AccountNumber + \': \' + FirstName + \' \' + LastName";
+            this.colCustomerDetails.ReadOnly = true;
+            // 
             // LoansAllocations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -197,6 +255,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblLoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEmployees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployee)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsCustomers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblCustomer)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -223,5 +283,13 @@
         private System.Data.DataColumn colTitle;
         private System.Data.DataColumn colHourlySalary;
         private System.Data.DataColumn colEmployeeDetails;
+        private System.Data.DataSet dsCustomers;
+        private System.Data.DataTable tblCustomer;
+        private System.Data.DataColumn colAccountNumber;
+        private System.Data.DataColumn dataColumn1;
+        private System.Data.DataColumn dataColumn2;
+        private System.Data.DataColumn colEmailAddress;
+        private System.Data.DataColumn colPhoneNumber;
+        private System.Data.DataColumn colCustomerDetails;
     }
 }

@@ -4,26 +4,26 @@ using System.Windows.Forms;
 
 namespace WattsALoan1
 {
-    public partial class Employees : Form
+    public partial class Customers : Form
     {
-        public Employees()
+        public Customers()
         {
             InitializeComponent();
         }
 
-        private void Employees_Load(object sender, EventArgs e)
+        private void Customers_Load(object sender, EventArgs e)
         {
-            string strFilename = "employees.xml";
+            string strFilename = "customers.xml";
 
             if (File.Exists(strFilename))
             {
-                dsEmployees.ReadXml(strFilename);
+                dsCustomers.ReadXml(strFilename);
             }
         }
 
-        private void Employees_FormClosing(object sender, FormClosingEventArgs e)
+        private void Customers_FormClosing(object sender, FormClosingEventArgs e)
         {
-            dsEmployees.WriteXml("employees.xml");
+            dsCustomers.WriteXml("customers.xml");
         }
 
         private void btnClose_Click(object sender, EventArgs e)
