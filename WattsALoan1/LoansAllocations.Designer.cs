@@ -71,6 +71,7 @@
             // colDateAllocated
             // 
             this.colDateAllocated.ColumnName = "DateAllocated";
+            this.colDateAllocated.DataType = typeof(System.DateTime);
             // 
             // colLoanNumber
             // 
@@ -87,26 +88,35 @@
             // colPrincipal
             // 
             this.colPrincipal.ColumnName = "Principal";
+            this.colPrincipal.DataType = typeof(double);
+            this.colPrincipal.DefaultValue = 0D;
             // 
             // colInterestRate
             // 
             this.colInterestRate.ColumnName = "InterestRate";
+            this.colInterestRate.DataType = typeof(double);
+            this.colInterestRate.DefaultValue = 8.75D;
             // 
             // colPeriods
             // 
             this.colPeriods.ColumnName = "Periods";
+            this.colPeriods.DataType = typeof(double);
+            this.colPeriods.DefaultValue = 36D;
             // 
             // colInterestEarned
             // 
             this.colInterestEarned.ColumnName = "InterestEarned";
+            this.colInterestEarned.DataType = typeof(double);
             // 
             // colFutureValue
             // 
             this.colFutureValue.ColumnName = "FutureValue";
+            this.colFutureValue.DataType = typeof(double);
             // 
             // colMonthlyPayment
             // 
             this.colMonthlyPayment.ColumnName = "MonthlyPayment";
+            this.colMonthlyPayment.DataType = typeof(double);
             // 
             // LoansAllocations
             // 
