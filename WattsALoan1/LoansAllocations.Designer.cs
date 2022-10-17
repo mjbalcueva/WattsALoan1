@@ -63,6 +63,9 @@
             this.colInterestEarned,
             this.colFutureValue,
             this.colMonthlyPayment});
+            this.tblLoan.Constraints.AddRange(new System.Data.Constraint[] {
+            new System.Data.UniqueConstraint("Constraint1", new string[] {
+                        "LoanNumber"}, false)});
             this.tblLoan.TableName = "Loan";
             // 
             // colDateAllocated
