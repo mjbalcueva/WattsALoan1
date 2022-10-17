@@ -89,16 +89,19 @@
             // 
             this.colPrincipal.ColumnName = "Principal";
             this.colPrincipal.DataType = typeof(double);
+            this.colPrincipal.DefaultValue = 0D;
             // 
             // colInterestRate
             // 
             this.colInterestRate.ColumnName = "InterestRate";
             this.colInterestRate.DataType = typeof(double);
+            this.colInterestRate.DefaultValue = 8.75D;
             // 
             // colPeriods
             // 
             this.colPeriods.ColumnName = "Periods";
             this.colPeriods.DataType = typeof(double);
+            this.colPeriods.DefaultValue = 36D;
             // 
             // colInterestEarned
             // 
