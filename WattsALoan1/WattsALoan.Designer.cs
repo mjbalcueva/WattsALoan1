@@ -37,6 +37,7 @@
             // 
             // btnPayments
             // 
+            this.btnPayments.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPayments.Location = new System.Drawing.Point(120, 62);
             this.btnPayments.Name = "btnPayments";
             this.btnPayments.Size = new System.Drawing.Size(270, 95);
@@ -47,6 +48,7 @@
             // 
             // btnAllocations
             // 
+            this.btnAllocations.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAllocations.Location = new System.Drawing.Point(410, 62);
             this.btnAllocations.Name = "btnAllocations";
             this.btnAllocations.Size = new System.Drawing.Size(270, 95);
@@ -57,6 +59,7 @@
             // 
             // btnCustomers
             // 
+            this.btnCustomers.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnCustomers.Location = new System.Drawing.Point(120, 177);
             this.btnCustomers.Name = "btnCustomers";
             this.btnCustomers.Size = new System.Drawing.Size(270, 95);
@@ -67,6 +70,7 @@
             // 
             // btnEmployees
             // 
+            this.btnEmployees.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnEmployees.Location = new System.Drawing.Point(410, 177);
             this.btnEmployees.Name = "btnEmployees";
             this.btnEmployees.Size = new System.Drawing.Size(270, 95);
@@ -77,6 +81,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnClose.Location = new System.Drawing.Point(265, 293);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(270, 95);

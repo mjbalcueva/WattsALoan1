@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dsEmployees = new System.Data.DataSet();
             this.tblEmployee = new System.Data.DataTable();
             this.colEmployeeNumber = new System.Data.DataColumn();
@@ -265,6 +265,9 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -294,9 +297,9 @@
             // paymentDateDataGridViewTextBoxColumn
             // 
             this.paymentDateDataGridViewTextBoxColumn.DataPropertyName = "PaymentDate";
-            dataGridViewCellStyle7.Format = "d";
-            dataGridViewCellStyle7.NullValue = null;
-            this.paymentDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle10.Format = "d";
+            dataGridViewCellStyle10.NullValue = null;
+            this.paymentDateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle10;
             this.paymentDateDataGridViewTextBoxColumn.HeaderText = "Pmt Date";
             this.paymentDateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.paymentDateDataGridViewTextBoxColumn.Name = "paymentDateDataGridViewTextBoxColumn";
@@ -329,9 +332,9 @@
             // paymentAmountDataGridViewTextBoxColumn
             // 
             this.paymentAmountDataGridViewTextBoxColumn.DataPropertyName = "PaymentAmount";
-            dataGridViewCellStyle8.Format = "C2";
-            dataGridViewCellStyle8.NullValue = null;
-            this.paymentAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle11.Format = "C2";
+            dataGridViewCellStyle11.NullValue = null;
+            this.paymentAmountDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle11;
             this.paymentAmountDataGridViewTextBoxColumn.HeaderText = "Pmt Amt";
             this.paymentAmountDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.paymentAmountDataGridViewTextBoxColumn.Name = "paymentAmountDataGridViewTextBoxColumn";
@@ -340,9 +343,9 @@
             // balanceDataGridViewTextBoxColumn
             // 
             this.balanceDataGridViewTextBoxColumn.DataPropertyName = "Balance";
-            dataGridViewCellStyle9.Format = "C2";
-            dataGridViewCellStyle9.NullValue = null;
-            this.balanceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle12.Format = "C2";
+            dataGridViewCellStyle12.NullValue = null;
+            this.balanceDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle12;
             this.balanceDataGridViewTextBoxColumn.HeaderText = "Balance";
             this.balanceDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.balanceDataGridViewTextBoxColumn.Name = "balanceDataGridViewTextBoxColumn";
@@ -350,6 +353,7 @@
             // 
             // btnClose
             // 
+            this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClose.Location = new System.Drawing.Point(713, 406);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 32);
@@ -360,6 +364,7 @@
             // 
             // btnLoans
             // 
+            this.btnLoans.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLoans.Location = new System.Drawing.Point(632, 406);
             this.btnLoans.Name = "btnLoans";
             this.btnLoans.Size = new System.Drawing.Size(75, 32);
