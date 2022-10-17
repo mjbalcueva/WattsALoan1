@@ -107,16 +107,22 @@
             // 
             this.colInterestEarned.ColumnName = "InterestEarned";
             this.colInterestEarned.DataType = typeof(double);
+            this.colInterestEarned.Expression = "Principal * (InterestRate / 100) * (Periods / 12)";
+            this.colInterestEarned.ReadOnly = true;
             // 
             // colFutureValue
             // 
             this.colFutureValue.ColumnName = "FutureValue";
             this.colFutureValue.DataType = typeof(double);
+            this.colFutureValue.Expression = "Principal + InterestEarned";
+            this.colFutureValue.ReadOnly = true;
             // 
             // colMonthlyPayment
             // 
             this.colMonthlyPayment.ColumnName = "MonthlyPayment";
             this.colMonthlyPayment.DataType = typeof(double);
+            this.colMonthlyPayment.Expression = "FutureValue / Periods";
+            this.colMonthlyPayment.ReadOnly = true;
             // 
             // LoansAllocations
             // 
