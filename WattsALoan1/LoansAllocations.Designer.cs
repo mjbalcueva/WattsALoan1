@@ -28,6 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dsLoansAllocations = new System.Data.DataSet();
             this.tblLoan = new System.Data.DataTable();
             this.colDateAllocated = new System.Data.DataColumn();
@@ -56,12 +63,25 @@
             this.colEmailAddress = new System.Data.DataColumn();
             this.colPhoneNumber = new System.Data.DataColumn();
             this.colCustomerDetails = new System.Data.DataColumn();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dateAllocatedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.loanNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.preparedByDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.preparedForDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.principalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.interestRateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.periodsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.interestEarnedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.futureValueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.monthlyPaymentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dsLoansAllocations)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLoan)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEmployees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployee)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCustomers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCustomer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // dsLoansAllocations
@@ -244,19 +264,170 @@
             this.colCustomerDetails.Expression = "AccountNumber + \': \' + FirstName + \' \' + LastName";
             this.colCustomerDetails.ReadOnly = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dateAllocatedDataGridViewTextBoxColumn,
+            this.loanNumberDataGridViewTextBoxColumn,
+            this.preparedByDataGridViewTextBoxColumn,
+            this.preparedForDataGridViewTextBoxColumn,
+            this.principalDataGridViewTextBoxColumn,
+            this.interestRateDataGridViewTextBoxColumn,
+            this.periodsDataGridViewTextBoxColumn,
+            this.interestEarnedDataGridViewTextBoxColumn,
+            this.futureValueDataGridViewTextBoxColumn,
+            this.monthlyPaymentDataGridViewTextBoxColumn});
+            this.dataGridView1.DataMember = "Loan";
+            this.dataGridView1.DataSource = this.dsLoansAllocations;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1178, 379);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // dateAllocatedDataGridViewTextBoxColumn
+            // 
+            this.dateAllocatedDataGridViewTextBoxColumn.DataPropertyName = "DateAllocated";
+            dataGridViewCellStyle36.Format = "d";
+            dataGridViewCellStyle36.NullValue = null;
+            this.dateAllocatedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle36;
+            this.dateAllocatedDataGridViewTextBoxColumn.HeaderText = "Date Allocated";
+            this.dateAllocatedDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dateAllocatedDataGridViewTextBoxColumn.Name = "dateAllocatedDataGridViewTextBoxColumn";
+            this.dateAllocatedDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // loanNumberDataGridViewTextBoxColumn
+            // 
+            this.loanNumberDataGridViewTextBoxColumn.DataPropertyName = "LoanNumber";
+            this.loanNumberDataGridViewTextBoxColumn.HeaderText = "Loan #";
+            this.loanNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.loanNumberDataGridViewTextBoxColumn.Name = "loanNumberDataGridViewTextBoxColumn";
+            this.loanNumberDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // preparedByDataGridViewTextBoxColumn
+            // 
+            this.preparedByDataGridViewTextBoxColumn.DataPropertyName = "PreparedBy";
+            this.preparedByDataGridViewTextBoxColumn.DataSource = this.dsEmployees;
+            this.preparedByDataGridViewTextBoxColumn.DisplayMember = "Employee.EmployeeDetails";
+            this.preparedByDataGridViewTextBoxColumn.HeaderText = "Prepared By";
+            this.preparedByDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.preparedByDataGridViewTextBoxColumn.Name = "preparedByDataGridViewTextBoxColumn";
+            this.preparedByDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.preparedByDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.preparedByDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // preparedForDataGridViewTextBoxColumn
+            // 
+            this.preparedForDataGridViewTextBoxColumn.DataPropertyName = "PreparedFor";
+            this.preparedForDataGridViewTextBoxColumn.DataSource = this.dsCustomers;
+            this.preparedForDataGridViewTextBoxColumn.DisplayMember = "Customer.CustomerDetails";
+            this.preparedForDataGridViewTextBoxColumn.HeaderText = "Prepared For";
+            this.preparedForDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.preparedForDataGridViewTextBoxColumn.Name = "preparedForDataGridViewTextBoxColumn";
+            this.preparedForDataGridViewTextBoxColumn.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.preparedForDataGridViewTextBoxColumn.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.preparedForDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // principalDataGridViewTextBoxColumn
+            // 
+            this.principalDataGridViewTextBoxColumn.DataPropertyName = "Principal";
+            dataGridViewCellStyle37.Format = "C2";
+            dataGridViewCellStyle37.NullValue = null;
+            this.principalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle37;
+            this.principalDataGridViewTextBoxColumn.HeaderText = "Principal";
+            this.principalDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.principalDataGridViewTextBoxColumn.Name = "principalDataGridViewTextBoxColumn";
+            this.principalDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // interestRateDataGridViewTextBoxColumn
+            // 
+            this.interestRateDataGridViewTextBoxColumn.DataPropertyName = "InterestRate";
+            dataGridViewCellStyle38.Format = "N2";
+            dataGridViewCellStyle38.NullValue = null;
+            this.interestRateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle38;
+            this.interestRateDataGridViewTextBoxColumn.HeaderText = "Rate (%)";
+            this.interestRateDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.interestRateDataGridViewTextBoxColumn.Name = "interestRateDataGridViewTextBoxColumn";
+            this.interestRateDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // periodsDataGridViewTextBoxColumn
+            // 
+            this.periodsDataGridViewTextBoxColumn.DataPropertyName = "Periods";
+            dataGridViewCellStyle39.Format = "N2";
+            dataGridViewCellStyle39.NullValue = null;
+            this.periodsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle39;
+            this.periodsDataGridViewTextBoxColumn.HeaderText = "Prd (Months";
+            this.periodsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.periodsDataGridViewTextBoxColumn.Name = "periodsDataGridViewTextBoxColumn";
+            this.periodsDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // interestEarnedDataGridViewTextBoxColumn
+            // 
+            this.interestEarnedDataGridViewTextBoxColumn.DataPropertyName = "InterestEarned";
+            dataGridViewCellStyle40.Format = "C2";
+            dataGridViewCellStyle40.NullValue = null;
+            this.interestEarnedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle40;
+            this.interestEarnedDataGridViewTextBoxColumn.HeaderText = "Interest Earned";
+            this.interestEarnedDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.interestEarnedDataGridViewTextBoxColumn.Name = "interestEarnedDataGridViewTextBoxColumn";
+            this.interestEarnedDataGridViewTextBoxColumn.ReadOnly = true;
+            this.interestEarnedDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // futureValueDataGridViewTextBoxColumn
+            // 
+            this.futureValueDataGridViewTextBoxColumn.DataPropertyName = "FutureValue";
+            dataGridViewCellStyle41.Format = "C2";
+            dataGridViewCellStyle41.NullValue = null;
+            this.futureValueDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle41;
+            this.futureValueDataGridViewTextBoxColumn.HeaderText = "Future Value";
+            this.futureValueDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.futureValueDataGridViewTextBoxColumn.Name = "futureValueDataGridViewTextBoxColumn";
+            this.futureValueDataGridViewTextBoxColumn.ReadOnly = true;
+            this.futureValueDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // monthlyPaymentDataGridViewTextBoxColumn
+            // 
+            this.monthlyPaymentDataGridViewTextBoxColumn.DataPropertyName = "MonthlyPayment";
+            dataGridViewCellStyle42.Format = "C2";
+            dataGridViewCellStyle42.NullValue = null;
+            this.monthlyPaymentDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle42;
+            this.monthlyPaymentDataGridViewTextBoxColumn.HeaderText = "Pmt/Month";
+            this.monthlyPaymentDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.monthlyPaymentDataGridViewTextBoxColumn.Name = "monthlyPaymentDataGridViewTextBoxColumn";
+            this.monthlyPaymentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.monthlyPaymentDataGridViewTextBoxColumn.Width = 110;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(1115, 406);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 32);
+            this.btnClose.TabIndex = 2;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // LoansAllocations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1202, 450);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "LoansAllocations";
             this.Text = "LoansAllocations";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoansAllocations_FormClosing);
+            this.Load += new System.EventHandler(this.LoansAllocations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsLoansAllocations)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblLoan)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsEmployees)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblEmployee)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsCustomers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tblCustomer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -291,5 +462,17 @@
         private System.Data.DataColumn colEmailAddress;
         private System.Data.DataColumn colPhoneNumber;
         private System.Data.DataColumn colCustomerDetails;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dateAllocatedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loanNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn preparedByDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewComboBoxColumn preparedForDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn principalDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn interestRateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn periodsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn interestEarnedDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn futureValueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn monthlyPaymentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnClose;
     }
 }
