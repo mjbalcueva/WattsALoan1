@@ -70,11 +70,13 @@
             // 
             // colDateAllocated
             // 
+            this.colDateAllocated.AllowDBNull = false;
             this.colDateAllocated.ColumnName = "DateAllocated";
             this.colDateAllocated.DataType = typeof(System.DateTime);
             // 
             // colLoanNumber
             // 
+            this.colLoanNumber.AllowDBNull = false;
             this.colLoanNumber.ColumnName = "LoanNumber";
             // 
             // colPreparedBy
