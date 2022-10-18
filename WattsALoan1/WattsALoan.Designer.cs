@@ -101,6 +101,7 @@
             this.Controls.Add(this.btnEmployees);
             this.Controls.Add(this.btnPayments);
             this.Name = "WattsALoan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Watts A Loan";
             this.ResumeLayout(false);
 

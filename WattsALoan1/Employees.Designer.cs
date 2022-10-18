@@ -91,7 +91,7 @@
             // 
             this.colHourlySalary.ColumnName = "HourlySalary";
             this.colHourlySalary.DataType = typeof(double);
-            this.colHourlySalary.DefaultValue = "8.75";
+            this.colHourlySalary.DefaultValue = 8.75D;
             // 
             // colEmployeeDetails
             // 
@@ -190,6 +190,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvEmployees);
             this.Name = "Employees";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employees";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Employees_FormClosing);
             this.Load += new System.EventHandler(this.Employees_Load);
