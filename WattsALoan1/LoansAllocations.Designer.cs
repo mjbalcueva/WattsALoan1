@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dsLoansAllocations = new System.Data.DataSet();
             this.tblLoan = new System.Data.DataTable();
             this.colDateAllocated = new System.Data.DataColumn();
@@ -270,6 +270,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dateAllocatedDataGridViewTextBoxColumn,
@@ -284,6 +285,7 @@
             this.monthlyPaymentDataGridViewTextBoxColumn});
             this.dataGridView1.DataMember = "Loan";
             this.dataGridView1.DataSource = this.dsLoansAllocations;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -294,9 +296,9 @@
             // dateAllocatedDataGridViewTextBoxColumn
             // 
             this.dateAllocatedDataGridViewTextBoxColumn.DataPropertyName = "DateAllocated";
-            dataGridViewCellStyle1.Format = "d";
-            dataGridViewCellStyle1.NullValue = null;
-            this.dateAllocatedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle22.Format = "d";
+            dataGridViewCellStyle22.NullValue = null;
+            this.dateAllocatedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle22;
             this.dateAllocatedDataGridViewTextBoxColumn.HeaderText = "Date Allocated";
             this.dateAllocatedDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.dateAllocatedDataGridViewTextBoxColumn.Name = "dateAllocatedDataGridViewTextBoxColumn";
@@ -337,9 +339,9 @@
             // principalDataGridViewTextBoxColumn
             // 
             this.principalDataGridViewTextBoxColumn.DataPropertyName = "Principal";
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.principalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle23.Format = "C2";
+            dataGridViewCellStyle23.NullValue = null;
+            this.principalDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle23;
             this.principalDataGridViewTextBoxColumn.HeaderText = "Principal";
             this.principalDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.principalDataGridViewTextBoxColumn.Name = "principalDataGridViewTextBoxColumn";
@@ -348,9 +350,9 @@
             // interestRateDataGridViewTextBoxColumn
             // 
             this.interestRateDataGridViewTextBoxColumn.DataPropertyName = "InterestRate";
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.interestRateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle24.Format = "N2";
+            dataGridViewCellStyle24.NullValue = null;
+            this.interestRateDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle24;
             this.interestRateDataGridViewTextBoxColumn.HeaderText = "Rate (%)";
             this.interestRateDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.interestRateDataGridViewTextBoxColumn.Name = "interestRateDataGridViewTextBoxColumn";
@@ -359,9 +361,9 @@
             // periodsDataGridViewTextBoxColumn
             // 
             this.periodsDataGridViewTextBoxColumn.DataPropertyName = "Periods";
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.periodsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle25.Format = "N2";
+            dataGridViewCellStyle25.NullValue = null;
+            this.periodsDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle25;
             this.periodsDataGridViewTextBoxColumn.HeaderText = "Prd (Months";
             this.periodsDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.periodsDataGridViewTextBoxColumn.Name = "periodsDataGridViewTextBoxColumn";
@@ -370,9 +372,9 @@
             // interestEarnedDataGridViewTextBoxColumn
             // 
             this.interestEarnedDataGridViewTextBoxColumn.DataPropertyName = "InterestEarned";
-            dataGridViewCellStyle5.Format = "C2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.interestEarnedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle26.Format = "C2";
+            dataGridViewCellStyle26.NullValue = null;
+            this.interestEarnedDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle26;
             this.interestEarnedDataGridViewTextBoxColumn.HeaderText = "Interest Earned";
             this.interestEarnedDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.interestEarnedDataGridViewTextBoxColumn.Name = "interestEarnedDataGridViewTextBoxColumn";
@@ -382,9 +384,9 @@
             // futureValueDataGridViewTextBoxColumn
             // 
             this.futureValueDataGridViewTextBoxColumn.DataPropertyName = "FutureValue";
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.futureValueDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle27.Format = "C2";
+            dataGridViewCellStyle27.NullValue = null;
+            this.futureValueDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle27;
             this.futureValueDataGridViewTextBoxColumn.HeaderText = "Future Value";
             this.futureValueDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.futureValueDataGridViewTextBoxColumn.Name = "futureValueDataGridViewTextBoxColumn";
@@ -394,9 +396,9 @@
             // monthlyPaymentDataGridViewTextBoxColumn
             // 
             this.monthlyPaymentDataGridViewTextBoxColumn.DataPropertyName = "MonthlyPayment";
-            dataGridViewCellStyle7.Format = "C2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.monthlyPaymentDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle28.Format = "C2";
+            dataGridViewCellStyle28.NullValue = null;
+            this.monthlyPaymentDataGridViewTextBoxColumn.DefaultCellStyle = dataGridViewCellStyle28;
             this.monthlyPaymentDataGridViewTextBoxColumn.HeaderText = "Pmt/Month";
             this.monthlyPaymentDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.monthlyPaymentDataGridViewTextBoxColumn.Name = "monthlyPaymentDataGridViewTextBoxColumn";
@@ -406,6 +408,11 @@
             // btnClose
             // 
             this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(29)))), ((int)(((byte)(72)))));
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(63)))), ((int)(((byte)(94)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(24)))), ((int)(((byte)(39)))));
             this.btnClose.Location = new System.Drawing.Point(1115, 406);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 32);
@@ -418,6 +425,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
             this.ClientSize = new System.Drawing.Size(1202, 450);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dataGridView1);
